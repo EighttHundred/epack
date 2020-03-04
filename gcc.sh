@@ -9,4 +9,4 @@ wget https://gcc.gnu.org/pub/gcc/infrastructure/mpc-1.0.3.tar.gz
 wget https://gcc.gnu.org/pub/gcc/infrastructure/gmp-6.1.0.tar.bz2
 ./configure --disable-multilib --enable-languages=c,c++
 make -j 4
-make install
+sudo make install
