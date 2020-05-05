@@ -1,0 +1,14 @@
+{
+    "editor.fontSize": 16,
+    "files.autoSave": "onFocusChange",
+    "workbench.colorTheme": "Quiet Light",
+    "window.zoomLevel": 2,
+    "workbench.editor.enablePreview": false,
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "http.proxy": "https://127.0.0.1:8118",
+    "search.searchOnType": false,
+    "files.autoSaveDelay": 0,
+    "workbench.statusBar.visible": true,
+    "workbench.activityBar.visible": true,
+    // "C_Cpp.default.includePath": ["{workspace}/include"],
+}
