@@ -5,10 +5,16 @@
     "window.zoomLevel": 2,
     "workbench.editor.enablePreview": false,
     "terminal.integrated.shell.linux": "/usr/bin/zsh",
-    "http.proxy": "https://127.0.0.1:8118",
     "search.searchOnType": false,
     "files.autoSaveDelay": 0,
     "workbench.statusBar.visible": true,
     "workbench.activityBar.visible": true,
+    "http.proxyAuthorization": null,
+    "timeline.pageSize": 0,
+    "http.proxy": "https://127.0.0.1:8118",
+    "markdown-pdf.executablePath": "/usr/bin/google-chrome",
+    "markdown-pdf.displayHeaderFooter": false,
+    "editor.hover.delay": 1000,
+    "editor.quickSuggestionsDelay": 0
     // "C_Cpp.default.includePath": ["{workspace}/include"],
 }
