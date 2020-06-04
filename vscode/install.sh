@@ -1,7 +1,7 @@
 #!/bin/bash
 
 install(){
-    if [ `command -v code|wc -l` -eq 0 ];then
+if [ `command -v code|wc -l` -eq 0 ];then
         echo "haven't install vscode in your device"
         exit
     fi
