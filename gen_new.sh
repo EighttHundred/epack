@@ -46,6 +46,7 @@ if [[ $is_sync == "y"  ]];then
     echo -e "\t\tsudo mv \$TO_DIR/\$file \$TO_DIR/\$file.old" >> load.sh
     echo -e "\tfi" >> load.sh
     echo -e "\tsudo cp \$file \$TO_DIR/\$file" >> load.sh
+    echo -e "\tsudo chmod 664 \$TO_DIR/\$file" >> load.sh
     echo -e "\techo load \$file success" >> load.sh
     echo "done" >> load.sh
     #source load.sh
@@ -55,7 +56,7 @@ if [[ $is_sync == "y"  ]];then
     echo "FROM_DIR=$sync_path" >> save.sh
     echo "for file in $sync_files;do" >> save.sh
     echo -e "\tif [ -e \$FROM_DIR/\$file ];then" >> save.sh
-    echo -e "\t\tsudo cp \$FROM_DIR/\$file \$file" >> save.sh
+    echo -e "\t\tcp \$FROM_DIR/\$file \$file" >> save.sh
     echo -e "\t\techo save \$file success" >> save.sh
     echo -e "\telse" >> save.sh
     echo -e "\t\techo \$FROM_DIR\$json not exist" >> save.sh
