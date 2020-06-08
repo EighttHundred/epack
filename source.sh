@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
-source trojan/source.sh
-source proxy/source.sh
+
+cd trojan
+source source.sh
+cd ../proxy
+source source.sh
+cd ..

@@ -20,22 +20,14 @@ curl(){
 }
 v2ray(){
     wget https://git.io/v2ray.sh
-    ./v2ray.sh 
+    ./v2ray.sh
 }
 docker(){
     sudo apt install docker.io
     sudo systemctl start docker
     sudo systemctl enable docker
 }
-privoxy(){
-    #sudo apt install privoxy
-    #vim /etc/privoxy/config
-    #forward-socks5t / 127.0.0.1:xxxx .
-    #service privoxy restart
-    echo 'export http_proxy=http://127.0.0.1:8118'>>~/.bashrc
-    echo 'export https_proxy=http://127.0.0.1:8118'>>~/.bashrc
-    source ~/.bashrc
-}
+
 fcitx(){
     # needn't install sogoupinyin when use this method
     sudo yum -y install epel-release
@@ -47,18 +39,7 @@ fcitx(){
     fcitx-configtool
     # add Sogou Pinyin to second option(first is English,error will occur when change turn)
 }
-zsh(){
-    sudo apt install -y zsh
-    wget \
-    https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh 
-    chmod +x install.sh
-    ./install.sh
-    rm install.sh
-    chsh -s /bin/zsh
-    mkdir $ZSH/plugins/incr
-    wget http://mimosa-pudica.net/src/incr-0.2.zsh  
-    mv incr-0.2.zsh $ZSH/plugins/incr/incr-0.2.zsh
-}
+
 gcc(){
     wget http://ftp.mirrorservice.org/sites/sourceware.org/pub/gcc/releases/gcc-7.3.0/gcc-7.3.0.tar.gz
     tar zxf gcc-7.3.0.tar.gz
@@ -97,7 +78,7 @@ install)
             ;;
         all)
             echo "install all functions"
-            ;;           
+            ;;
         esac
         ;;
     gcc)
