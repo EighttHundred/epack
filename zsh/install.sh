@@ -6,10 +6,9 @@ if [ `command -v code|wc -l` -eq 0 ];then
 else
     echo "already install zsh"
 fi
-if [ ! -e ../tmp/zsh_install.sh ];then
-    wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O zsh_install.sh
-    mv zsh_install.sh ../tmp/zsh_install.sh
-    source ../tmp/zsh_install.sh
+if [ ! -e ../tmp/ohmyzsh.sh ];then
+    wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O ../tmp/ohmyzsh.sh
+    source ../tmp/ohmyzsh.sh
     echo "install oh-my-zsh success"
 else
     echo "already install oh-my-zsh"
