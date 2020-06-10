@@ -2,7 +2,7 @@
 
 start-proxy(){
 start-trojan
-if [ `command -v gsettings|wc -l` -eq 0 ];then
+if [ `command -v gsettings|wc -l` -eq 1 ];then
     gsettings set org.gnome.system.proxy mode manual
     gsettings set org.gnome.system.proxy.socks host '127.0.0.1'
     gsettings set org.gnome.system.proxy.socks port '2333'
@@ -10,7 +10,7 @@ fi
 export http_proxy=127.0.0.1:8118
 export https_proxy=127.0.0.1:8118
 export all_proxy=127.0.0.1:8118
-if [ `command -v git|wc -l` -eq 0 ];then
+if [ `command -v git|wc -l` -eq 1 ];then
     git config --global http.proxy socks5://127.0.0.1:2333
     git config --global https.proxy socks5://127.0.0.1:2333
 fi
@@ -18,7 +18,7 @@ fi
 
 close-proxy(){
 close-trojan
-if [ `command -v gsettings|wc -l` -eq 0 ];then
+if [ `command -v gsettings|wc -l` -eq 1 ];then
     gsettings set org.gnome.system.proxy.socks host ''
     gsettings set org.gnome.system.proxy.socks port '0'
     gsettings set org.gnome.system.proxy mode none
@@ -26,7 +26,7 @@ fi
 unset http_proxy
 unset https_proxy
 unset all_proxy
-if [ `command -v git|wc -l` -eq 0 ];then
+if [ `command -v git|wc -l` -eq 1 ];then
     git config --global --unset http.proxy
     git config --global --unset https.proxy
 fi

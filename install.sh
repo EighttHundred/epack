@@ -14,7 +14,7 @@ cd ../proxy
 source source.sh
 start-proxy
 cd ../zsh
-bash install.sh
+source install.sh
 cd ..
 
 source configure.sh
