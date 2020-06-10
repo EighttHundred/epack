@@ -48,7 +48,7 @@ if [[ $is_sync == "y"  ]];then
     echo -e "\t\tsudo mv \$TO_DIR/\$file \$TO_DIR/\$file.old" >> load.sh
     echo -e "\tfi" >> load.sh
     echo -e "\tsudo cp \$file \$TO_DIR/\$file" >> load.sh
-    echo -e "\tsudo chmod 664 \$TO_DIR/\$file" >> load.sh
+    echo -e "\tsudo chmod 666 \$TO_DIR/\$file" >> load.sh
     echo -e "\techo load \$file success" >> load.sh
     echo "done" >> load.sh
     #source load.sh

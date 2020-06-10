@@ -6,8 +6,12 @@ fi
 if [ ! -d tmp ];then
     mkdir tmp
 fi
-bash trojan/install.sh
-bash privoxy/install.sh
-bash zsh/install.sh
+cd trojan
+bash install.sh
+cd ../privoxy
+bash install.sh
+cd ../zsh
+bash install.sh
+cd ..
 
 source configure.sh
