@@ -7,6 +7,6 @@ for file in config.json;do
 		sudo mv $TO_DIR/$file $TO_DIR/$file.old
 	fi
 	sudo cp $file $TO_DIR/$file
-	sudo chmod 664 $TO_DIR/$file
+	sudo chmod 666 $TO_DIR/$file
 	echo load $file success
 done
