@@ -7,9 +7,12 @@ if [ ! -d tmp ];then
     mkdir tmp
 fi
 cd trojan
-bash install.sh
+source install.sh
 cd ../privoxy
-bash install.sh
+source install.sh
+cd ../proxy
+source source.sh
+start-proxy
 cd ../zsh
 bash install.sh
 cd ..
