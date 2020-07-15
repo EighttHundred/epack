@@ -13,3 +13,13 @@ showtotal(){
 }
 
 
+source vim/source.sh
+source vim/source.sh
+source vim/source.sh
+source vim/source.sh
+source vim/source.sh
+source vim/source.sh
+source vim/source.sh
+source vim/source.sh
+source vim/source.sh
+source vim/source.sh

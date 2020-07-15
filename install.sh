@@ -17,4 +17,14 @@ cd ../zsh
 source install.sh
 cd ..
 
-source configure.sh
+echo "cd $PWD" >> ~/.bashrc
+echo "source source.sh" >> ~/.bashrc
+echo "cd -" >> ~/.bashrc
+source ~/.bashrc
+if [ -e ~/.zshrc ];then
+    echo "cd $PWD" >> ~/.zshrc
+    echo "source source.sh" >> ~/.zshrc
+    echo "cd -" >> ~/.zshrc
+    source ~/.zshrc
+fi
+
